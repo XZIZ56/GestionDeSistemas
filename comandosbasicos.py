@@ -1,8 +1,11 @@
-
+"""Victor Alexis Gutierrez Gonzalez"""
 import subprocess
 
 def ejecutar(comando):
     subprocess.run(comando, shell=True)
+
+def ejcutar_programa(calculadora):
+    subprocess.run(calculadora, shell=True)
 
 while True:
     print("MENU DE OPERACIONES EN UBUNTU")
@@ -15,7 +18,8 @@ while True:
     print("7. Navegar al directorio 'calificaciones'")
     print("8. Listar contenido del directorio actual")
     print("9. Navegar al directorio 'primer_parcial'")
-    print("10. Salir")
+    print("10. Abriendo calculadora en pyhton")
+    print("11. Salir")
 
     opcion = int(input("Seleccione una opción (1-10): "))
 
@@ -52,12 +56,15 @@ while True:
         ejecutar("cd primer_parcial")
 
     elif opcion == 10:
+        import SISOP
+        print("abriendo calculadora")
+            
+    elif opcion == 11:
         print("Saliendo del programa...")
         break
 
     else:
         print("Opción no válida. Inténtelo de nuevo.")
-        
  
 
         
